@@ -1,0 +1,22 @@
+{
+	"name": "serverless-puppeteer",
+	"version": "0.1.0",
+	"author": "",
+	"private": true,
+	"scripts": {
+		"sls": "serverless",
+		"dev": "nodemon --exec sls offline",
+		"deploy": "sls deploy"
+	},
+	"dependencies": {
+		"chrome-aws-lambda": "^5.2.1",
+		"puppeteer-core": "^5.2.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4",
+		"puppeteer": "^5.2.1",
+		"serverless": "^1.80.0",
+		"serverless-dotenv-plugin": "^3.0.0",
+		"serverless-offline": "^6.6.0"
+	}
+}

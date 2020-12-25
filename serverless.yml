@@ -1,0 +1,24 @@
+service: serverless-puppeteer
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: production
+  region: us-east-1
+  timeout: 30
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+custom:
+  serverless-offline:
+    host: 0.0.0.0
+
+functions:
+  example:
+    handler: src/functions/example.handler
+    events:
+      - http:
+          method: get
+          path: /example
